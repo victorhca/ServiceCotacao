@@ -11,9 +11,9 @@ namespace ServiceCotacao.Api
 {
     public class SendActions
     {
-        public string GetConversao(int DeMoedaIso, int ParaMoedaIso, string Data) {
+        public string GetConversao(int DeMoedaIso, int ParaMoedaIso, double Valor, string Data) {
             try {
-                string caminho = string.Format(@"https://www3.bcb.gov.br/bc_moeda/rest/converter/1/1/{0}/{1}/{2}", DeMoedaIso, ParaMoedaIso, Data);
+                string caminho = string.Format(@"https://www3.bcb.gov.br/bc_moeda/rest/converter/{0}/1/{1}/{2}/{3}", Valor, DeMoedaIso, ParaMoedaIso, Data);
 
                 var requisicaoWeb = WebRequest.CreateHttp(caminho);
                 requisicaoWeb.Method = "GET";
