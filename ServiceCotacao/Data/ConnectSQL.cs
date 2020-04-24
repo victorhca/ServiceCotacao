@@ -53,6 +53,12 @@ namespace ServiceCotacao.Data
             return query;
         }
 
+        public string QueryUpdateProcess(int id) {
+            string query = string.Format(@"Update Quotations set ProcessSrv = 'Y'
+                                        Where Id = '{0}'", id);
+            return query;
+        }
+
         public void Dispose() {
             Connection = null;
             Command = null;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ServiceCotacao.Models
 {
-    class Cotacao
+    public class Cotacao
     {
         public int Id { get; set; }
         public string DeMoedaCode { get; set; }
@@ -40,6 +40,13 @@ namespace ServiceCotacao.Models
 
                 }
                 return lstdCo;
+            }
+        }
+
+        public void UpdateProcess(int id) {
+            
+            using (var cs = new ConnectSQL()) {
+                var reader = cs.ExecuteQuery(cs.QueryUpdateProcess(id));
             }
         }
     }

@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions\Email.cs" />
     <Compile Include="Api\SendActions.cs" />
     <Compile Include="ControladorSrv.cs" />
     <Compile Include="Data\ConnectSQL.cs" />

@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Connect>
-	<connectDb>server=****;user id=****;password=****;initial catalog=DbTeste</connectDb>
-</Connect>
-
+<Config>
+  <Timer>
+    <Intervalo>60000</Intervalo>    <!--Valor em milissegundos-->
+  </Timer>
+  
+	<Connect>
+		<connectDb>server=****;user id=****;password=****;initial catalog=DbTeste</connectDb>
+	</Connect>
+ 
+  <EmailBase>
+    <Usuario></Usuario>
+    <Senha></Senha>
+    <Servidor></Servidor>
+    <Porta></Porta>
+    <EnableSsl></EnableSsl>    <!--Opções válidas: Y ou N-->
+  </EmailBase>
+</Config>
